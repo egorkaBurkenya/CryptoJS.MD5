@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Input from './components/Input';
+import Button from './components/Button';
+import { MD5 } from 'crypto-js';
 
 function App() {
+
+  const [pass, setPass] = useState('');
+
+
+  const [md5Pass, setMd5Pass] = useState("");
+
+  const CryptoPass = () => {
+    setMd5Pass(MD5(pass).toString());
+    setPass('');
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="title"> Passwords CryptoJs.MD5 🐱‍💻 </h1>
+      <p className="description">Enter the password ⬇️</p>
+      <div className="crypto">
+        <Input placeholder="Password" value={pass} setValue={setPass} />
+        <Button onClick={() => CryptoPass()} text="Crypto🐱‍💻" />
+      </div>
+      <div className="result">
+        <h2>Your hash:</h2>
+        <h2 className="hash">{md5Pass}</h2>
+      </div>
     </div>
   );
 }

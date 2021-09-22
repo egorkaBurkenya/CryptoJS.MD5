@@ -36,3 +36,75 @@
     transform: rotate(360deg);
   }
 }
+
+.title {
+  border-bottom: 3px solid #61dafb;
+  width: 30%;
+  margin: 20px auto;
+  color: #202020;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.crypto {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.my-input {
+  margin-bottom: 20px;
+  font-size: 20px;
+  padding: 10px 5px;
+  outline: none;
+  border: 3px solid #61dafb;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+.my-button {
+  outline: none; 
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  padding: 10px 5px;
+  border: 3px solid #43a9c5;
+  width: 70%;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.hash {
+  font-size: 20px;
+  border-bottom: 1px solid ;
+}
+
+.my-button:hover {
+  border: 3px solid #2b7185;
+  background: #43a9c52a;
+}
+
+.my-button:active {
+  border: 3px solid #5edcff;
+  background: #2c798fea;
+  color: white;
+}
+
+.my-button:before {
+  border: 3px solid #5edcff;
+  background: #2c798fea;
+  color: white;
+}
